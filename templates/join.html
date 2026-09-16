@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Join{% endblock %}
+{% block content %}
+
+<section>
+  <h2>Joining</h2>
+  <ol class="steps">
+    {% for step in join.steps %}<li>{{ step }}</li>{% endfor %}
+  </ol>
+  <p style="margin-top:1.4rem;">{{ join.closing }} <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% if site.instagram %}, or find us on <a href="https://instagram.com/{{ site.instagram }}">Instagram</a>{% endif %}.</p>
+</section>
+
+<section>
+  <h2>Resources</h2>
+  <div class="rows">
+    {% for r in resources %}
+    <div class="row">
+      <h3><a href="{{ r.url }}">{{ r.name }}</a></h3>
+      <p>{{ r.note }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

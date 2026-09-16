@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<section>
+  <h2>This week's problem</h2>
+
+  <p class="problem-meta">
+    <span class="tag">Problem {{ potw.number }}</span> ·
+    posted {{ potw.posted }} ·
+    due {{ potw.due }} ·
+    {{ potw.difficulty }}
+  </p>
+
+  <p class="statement">{{ potw.statement | safe }}</p>
+
+  <details class="reveal">
+    <summary>Show a hint</summary>
+    <p>{{ potw.hint }}</p>
+  </details>
+
+  <p class="submit-note">{{ potw.how_to_submit }}</p>
+</section>
+
+<section>
+  <h2>This week's meeting</h2>
+  <div class="callout">
+    <dl>
+      <dt>When</dt><dd>{{ meetings.next_date }}</dd>
+      <dt>Where</dt><dd>{{ meetings.where }}</dd>
+      <dt>Topic</dt><dd>{{ meetings.next_topic }}</dd>
+    </dl>
+    <p class="note">{{ meetings.note }} <a href="{{ base }}schedule.html">Full schedule →</a></p>
+  </div>
+</section>
+
+{% endblock %}

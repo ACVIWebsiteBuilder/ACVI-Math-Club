@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Anderson CVI</title>
+<meta name="description" content="We meet every week to argue about problems that don&#39;t have obvious answers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #FAF8F3;
+  --ink:   #1C1B19;
+  --ink-soft: #6B6560;
+  --rule:  #DDD6C8;
+  --accent: #7A2E2A;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=&#34;light&#34;]) {
+    --paper: #171512;
+    --ink:   #EDE9E1;
+    --ink-soft: #9C948A;
+    --rule:  #35312B;
+    --accent: #D08A80;
+  }
+}
+:root[data-theme=&#34;dark&#34;] {
+  --paper: #171512;
+  --ink:   #EDE9E1;
+  --ink-soft: #9C948A;
+  --rule:  #35312B;
+  --accent: #D08A80;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: &#34;Source Serif 4&#34;, Georgia, &#34;Times New Roman&#34;, serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--paper); color: var(--ink);
+  padding: .6rem 1rem; z-index: 50; border: 1px solid var(--rule);
+}
+.skip:focus { left: 1rem; top: 1rem; }
+
+.wrap { width: 100%; max-width: 640px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ---------- masthead ---------- */
+header.masthead {
+  padding: 3.2rem 0 1.6rem;
+  text-align: center;
+  border-bottom: 3px double var(--rule);
+}
+.masthead .eyebrow {
+  font-style: italic; color: var(--ink-soft); font-size: 1rem; margin: 0 0 .3rem;
+}
+.masthead h1 {
+  font-size: 2.5rem; font-weight: 600; letter-spacing: -.01em;
+  margin: 0; line-height: 1.1;
+}
+.masthead h1 a { text-decoration: none; color: inherit; }
+.masthead .tagline {
+  color: var(--ink-soft); font-style: italic; margin: .6rem 0 0; font-size: 1.05rem;
+}
+
+nav.pages {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: 0 1.6rem; margin-top: 1.5rem; font-size: 1rem;
+}
+nav.pages a { text-decoration: none; color: var(--ink-soft); padding-bottom: .15rem; }
+nav.pages a:hover { color: var(--accent); }
+nav.pages a[aria-current=&#34;page&#34;] {
+  color: var(--ink); border-bottom: 1px solid var(--accent);
+}
+
+/* ---------- content ---------- */
+main { padding: 3rem 0 1rem; }
+
+h2 {
+  font-size: 1.5rem; font-weight: 600; letter-spacing: -.005em;
+  margin: 0 0 1.6rem;
+}
+h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 .2rem; }
+
+p { max-width: 62ch; }
+.lede { font-size: 1.15rem; }
+
+section + section { margin-top: 3.4rem; }
+
+/* problem of the week (home hero) */
+.problem-meta {
+  font-style: italic; color: var(--ink-soft); font-size: 1rem;
+  margin: 0 0 1.6rem;
+}
+.problem-meta .tag { color: var(--accent); font-style: normal; font-weight: 600; }
+.statement {
+  font-size: 1.4rem; line-height: 1.55; margin: 0 0 1.6rem; max-width: 46ch;
+}
+.statement em { font-style: italic; }
+
+details.reveal { border-top: 1px solid var(--rule); padding-top: 1rem; margin-top: 1.6rem; }
+details.reveal summary {
+  cursor: pointer; color: var(--accent); font-style: italic;
+  list-style: none; width: fit-content;
+}
+details.reveal summary::-webkit-details-marker { display: none; }
+details.reveal p { margin: .8rem 0 0; color: var(--ink-soft); max-width: 52ch; }
+.submit-note { font-style: italic; color: var(--ink-soft); margin: 1.4rem 0 0; }
+
+/* generic rows (activities, meetings rows, resources) */
+.rows { border-top: 1px solid var(--rule); }
+.row {
+  padding: 1.3rem 0; border-bottom: 1px solid var(--rule);
+  display: grid; grid-template-columns: 9rem 1fr; gap: .3rem 1.6rem; align-items: baseline;
+}
+.row p { margin: 0; color: var(--ink-soft); }
+.row .when { font-style: italic; color: var(--accent); }
+
+/* meetings callout */
+.callout dl {
+  margin: 0; border-top: 1px solid var(--rule); padding-top: 1.4rem;
+  display: grid; grid-template-columns: 8rem 1fr; gap: .7rem 1.2rem;
+}
+.callout dt { color: var(--ink-soft); font-style: italic; }
+.callout dd { margin: 0; }
+.callout .note { margin: 1.4rem 0 0; color: var(--ink-soft); font-style: italic; max-width: 55ch; }
+
+/* officers */
+.people { border-top: 1px solid var(--rule); }
+.person { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.person .role { color: var(--ink-soft); font-style: italic; }
+
+/* archive */
+.archive-item { border-top: 1px solid var(--rule); padding: 1.2rem 0; }
+.archive-item:last-child { border-bottom: 1px solid var(--rule); }
+.archive-item summary {
+  cursor: pointer; list-style: none;
+  display: flex; gap: 1rem; align-items: baseline; justify-content: space-between;
+}
+.archive-item summary::-webkit-details-marker { display: none; }
+.archive-item .no { color: var(--ink-soft); font-style: italic; }
+.archive-item .title { flex: 1; }
+.archive-item .topic { color: var(--ink-soft); font-style: italic; font-size: .95rem; white-space: nowrap; }
+.archive-item .answer { margin: .9rem 0 0; color: var(--ink-soft); max-width: 55ch; }
+.archive-item .answer b { color: var(--accent); font-style: italic; font-weight: 400; }
+
+/* join steps */
+ol.steps { border-top: 1px solid var(--rule); padding: 1.4rem 0 0 1.4rem; margin: 0; }
+ol.steps li { margin-bottom: .9rem; max-width: 58ch; padding-left: .3rem; }
+
+footer {
+  border-top: 3px double var(--rule); padding: 1.8rem 0 3.4rem;
+  text-align: center; color: var(--ink-soft); font-size: .95rem; font-style: italic;
+  margin-top: 3.4rem;
+}
+footer p { margin: .2rem 0; }
+footer a { color: var(--ink-soft); }
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .masthead h1 { font-size: 2rem; }
+  nav.pages { gap: .5rem 1.1rem; font-size: .95rem; }
+  .statement { font-size: 1.2rem; }
+  .row, .callout dl { grid-template-columns: 1fr; }
+  .callout dt { margin-top: .6rem; }
+  .archive-item summary { flex-wrap: wrap; gap: .2rem .7rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Anderson CVI, est. 1960</p>
+    <h1><a href="index.html">Math Club</a></h1>
+    <p class="tagline">We meet every week to argue about problems that don&#39;t have obvious answers.</p>
+    <nav class="pages" aria-label="Pages">
+      <a href="index.html" >Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="schedule.html" >Schedule</a>
+      <a href="archive.html" >Archive</a>
+      <a href="join.html" >Join</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+<section>
+  <h2>About the club</h2>
+  <p class="lede">Math Club is open to every student at Anderson CVI, whether you are in Algebra 1 or finishing BC Calculus. You do not need to be fast, and you do not need to compete.</p>
+  <div class="rows">
+    <div class="row">
+      <h3>Problem sessions</h3>
+      <p>We put one problem on the board and work it out together. Wrong turns are the useful part.</p>
+    </div>
+    <div class="row">
+      <h3>Contest practice</h3>
+      <p>Timed sets from old AMC and ARML papers for anyone who wants them.</p>
+    </div>
+    <div class="row">
+      <h3>Talks</h3>
+      <p>Short student talks on something you found interesting. Fifteen minutes, no slides required.</p>
+    </div>
+    <div class="row">
+      <h3>Peer tutoring</h3>
+      <p>Members tutor underclassmen during lunch on Wednesdays.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Who runs it</h2>
+  <div class="people">
+    <div class="person">
+      <h3>WORK IN PROGRESS</h3>
+      <div class="role">President — Grade 12</div>
+    </div>
+    <div class="person">
+      <h3>WORK IN PROGRESS</h3>
+      <div class="role">Vice president — Grade 11</div>
+    </div>
+    <div class="person">
+      <h3>WORK IN PROGRESS</h3>
+      <div class="role">Treasurer — Grade 11</div>
+    </div>
+    <div class="person">
+      <h3>WORK IN PROGRESS</h3>
+      <div class="role">Faculty advisor — Room 205</div>
+    </div>
+  </div>
+</section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Math Club, Anderson CVI — 2026-27</p>
+    <p><a href="mailto:mathclub@andersoncvi.edu">mathclub@andersoncvi.edu</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

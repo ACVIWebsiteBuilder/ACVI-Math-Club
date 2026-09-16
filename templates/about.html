@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+<section>
+  <h2>About the club</h2>
+  <p class="lede">{{ about.lead }}</p>
+  <div class="rows">
+    {% for name, detail in about.activities %}
+    <div class="row">
+      <h3>{{ name }}</h3>
+      <p>{{ detail }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Who runs it</h2>
+  <div class="people">
+    {% for p in officers %}
+    <div class="person">
+      <h3>{{ p.name }}</h3>
+      <div class="role">{{ p.role }} — {{ p.note }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

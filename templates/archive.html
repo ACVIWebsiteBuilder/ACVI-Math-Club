@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Archive{% endblock %}
+{% block content %}
+
+<section>
+  <h2>Problem archive</h2>
+  <p>Past problems of the week. Open one to see the answer.</p>
+  <div>
+    {% for a in archive %}
+    <details class="archive-item">
+      <summary>
+        <span class="no">No. {{ "%02d"|format(a.number) }}</span>
+        <span class="title">{{ a.title }}</span>
+        <span class="topic">{{ a.topic }}</span>
+      </summary>
+      <p class="answer"><b>Answer.</b> {{ a.answer }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

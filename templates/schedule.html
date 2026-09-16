@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Schedule{% endblock %}
+{% block content %}
+
+<section>
+  <h2>Meetings</h2>
+  <div class="callout">
+    <dl>
+      <dt>Every</dt><dd>{{ meetings.when }}</dd>
+      <dt>Where</dt><dd>{{ meetings.where }}</dd>
+      <dt>Next up</dt><dd>{{ meetings.next_date }} — {{ meetings.next_topic }}</dd>
+    </dl>
+    <p class="note">{{ meetings.note }}</p>
+  </div>
+</section>
+
+<section>
+  <h2>Competition calendar</h2>
+  <p>Everything here is optional. Members often sit one contest a year and skip the rest.</p>
+  <div class="rows">
+    {% for c in competitions %}
+    <div class="row">
+      <span class="when">{{ c.date }}</span>
+      <div>
+        <h3>{{ c.name }}</h3>
+        <p>{{ c.detail }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
