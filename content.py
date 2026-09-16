@@ -19,8 +19,8 @@ SITE = {
 # fine here: √ π ≤ ≥ ≠ ∑ ∞ ° ⌊ ⌋ ² ³ ₁ ₂
 PROBLEM_OF_THE_WEEK = {
     "number": 6,
-    "posted": "September 14, 2026",
-    "due": "Friday at 3:30 PM",
+    "posted": "September 16, 2026",
+    "due": "Wednesday at 12:15 PM",
     "difficulty": "Medium",      # Warm-up / Medium / Hard
     "statement": (
         "A 3 × 3 grid is filled with the numbers 1 through 9, each used once. "
@@ -36,16 +36,16 @@ PROBLEM_OF_THE_WEEK = {
 
 # ---- Past problems (newest first) ----------------------------
 ARCHIVE = [
-    {"number": 5, "title": "The seven bridges of the cafeteria", "topic": "Graph theory",
-     "answer": "No such walk exists - four corners have odd degree."},
-    {"number": 4, "title": "A rope around the equator", "topic": "Geometry",
-     "answer": "About 16 cm, and it does not depend on the size of the planet."},
-    {"number": 3, "title": "Three dice, one suspicious total", "topic": "Probability",
+    {"number": 5, "title": "WIP", "topic": "WIP",
+     "answer": "WIP"},
+    {"number": 4, "title": "WIP",
+     "answer": "WIP"},
+    {"number": 3, "title": "WIP",
      "answer": "25/216"},
-    {"number": 2, "title": "Why 1 is not prime", "topic": "Number theory",
+    {"number": 2, "title": "WIP", "topic": "WIP",
      "answer": "Unique factorization would fail."},
-    {"number": 1, "title": "Folding a strip of paper", "topic": "Sequences",
-     "answer": "The dragon curve."},
+    {"number": 1, "title": "WIP", "topic": "WIP",
+     "answer": "WIP"},
 ]
 
 # ---- What the club actually does -----------------------------
@@ -53,8 +53,7 @@ ABOUT = {
     "lead": (
         "Math Club is open to every student at "
         + SITE["school"]
-        + ", whether you are in Algebra 1 or finishing BC Calculus. "
-        "You do not need to be fast, and you do not need to compete."
+        + "You do not need to be fast, and you do not need to compete."
     ),
     "activities": [
         ("Problem sessions", "We put one problem on the board and work it out together. "
@@ -68,28 +67,28 @@ ABOUT = {
 
 # ---- Meetings ------------------------------------------------
 MEETINGS = {
-    "when": "Thursdays, 3:15 - 4:30 PM",
+    "when": "Wednesday, 12:15 - 12:50 PM",
     "where": "Room 205",
-    "next_date": "Thursday, September 17",
-    "next_topic": "Pigeonhole principle, and why it keeps showing up",
-    "note": "Come late, leave early, bring food. Nobody takes attendance.",
+    "next_date": "Wednesday, September 23",
+    "next_topic": "WIP",
+    "note": "WIP",
 }
 
 # ---- Competition calendar (a real sequence, so it is dated) ---
 COMPETITIONS = [
-    {"date": "Nov 6", "name": "AMC 10/12 A", "detail": "Sign up with our faculty advisor by October 10. Free for members."},
-    {"date": "Nov 12", "name": "AMC 10/12 B", "detail": "Alternate sitting if you have a conflict with the A date."},
-    {"date": "Feb 5", "name": "AIME I", "detail": "Qualify through the AMC. We run two prep sessions in January."},
-    {"date": "Mar 21", "name": "State Math League finals", "detail": "Team of six. Tryouts in February."},
-    {"date": "May 30", "name": "Pi Day Puzzle Hunt", "detail": "We host it. Volunteers needed to write puzzles."},
+    {"date": "WIP", "name": "WIP", "detail": "WIP"},
+    {"date": "WIP", "name": "WIP", "detail": "WIP"},
+    {"date": "WIP", "name": "WIP", "detail": "WIP"},
+    {"date": "WIP", "name": "WIPs", "detail": "WIP"},
+    {"date": "WIP", "name": "WIP", "detail": "WIP"},
 ]
 
 # ---- Officers ------------------------------------------------
 OFFICERS = [
-    {"name": "WORK IN PROGRESS", "role": "President", "note": "Grade 12"},
-    {"name": "WORK IN PROGRESS", "role": "Vice president", "note": "Grade 11"},
-    {"name": "WORK IN PROGRESS", "role": "Treasurer", "note": "Grade 11"},
-    {"name": "WORK IN PROGRESS", "role": "Faculty advisor", "note": "Room 205"},
+    {"name": "WORK IN PROGRESS", "role": "WIP", "note": "WIP"},
+    {"name": "WORK IN PROGRESS", "role": "WIP", "note": "WIP"},
+    {"name": "WORK IN PROGRESS", "role": "WIP", "note": "WIP"},
+    {"name": "WORK IN PROGRESS", "role": "WIP", "note": "Room 205"},
 ]
 
 # ---- Resources -----------------------------------------------
@@ -109,9 +108,7 @@ RESOURCES = [
 # ---- Joining -------------------------------------------------
 JOIN = {
     "steps": [
-        "Show up to any Thursday meeting in Room 205. That is the whole process.",
-        "Add your name to the roster sheet so you get the weekly email.",
-        "Optional: pay the $5 yearly dues, which cover contest fees and snacks.",
+        "Show up to any Wednesday meeting in Room 205. That is the whole process.",
     ],
-    "closing": "If you would rather ask a question first, email us.",
+    "closing": "Go ahead and email us",
 }
